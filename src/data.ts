@@ -24,7 +24,7 @@ export const personalInfo = {
       icon: Mail,
     }
   ],
-  headshot: "/headshot.jpg"
+  headshot: "headshot.jpg"
 };
 
 export const experiences = [
