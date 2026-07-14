@@ -1,22 +1,22 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
-import Projects from './components/Projects';
 import Writing from './components/Writing';
-import Contact from './components/Contact';
+import Interests from './components/Interests';
 
 function App() {
   return (
-    <div className="bg-slate-950 min-h-screen text-slate-100 selection:bg-blue-500/30">
+    <div className="container">
       <Header />
-      <main>
+      <main className="content-stream">
         <Hero />
-        <Skills />
         <Projects />
         <Experience />
+        <Skills />
         <Writing />
-        <Contact />
+        <Interests />
       </main>
     </div>
   );

@@ -1,78 +1,34 @@
-import { useState, useEffect } from 'react';
-import clsx from 'clsx';
-import Menu from 'lucide-react/dist/esm/icons/menu';
-import X from 'lucide-react/dist/esm/icons/x';
+import { Terminal, User, Cpu, Briefcase, Layers, BookOpen } from 'lucide-react';
+import { personalInfo } from '../data';
+
+const navItems = [
+  { href: '#about', label: 'About', icon: User },
+  { href: '#projects', label: 'Projects', icon: Cpu },
+  { href: '#experience', label: 'Experience', icon: Briefcase },
+  { href: '#skills', label: 'Skills', icon: Layers },
+  { href: '#writings', label: 'Writing', icon: BookOpen },
+];
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navLinks = [
-    { name: 'About', href: '#' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Writing', href: '#writing' },
-  ];
-
   return (
-    <header 
-      className={clsx(
-        "fixed top-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-slate-950/80 backdrop-blur-md py-4 shadow-lg shadow-blue-900/10" : "bg-transparent py-6"
-      )}
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="#" className="text-blue-500 font-bold text-xl font-mono">
-          &lt;IT /&gt;
-        </a>
+    <>
+      <header className="brand-header">
+        <div className="brand-logo">
+          <Terminal size={16} aria-hidden /> {personalInfo.brand}
+        </div>
+        <div>{personalInfo.brandTagline}</div>
+      </header>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8">
-          {navLinks.map((link, i) => (
-            <a 
-              key={link.name}
-              href={link.href}
-              className="text-slate-400 hover:text-blue-400 text-sm font-mono transition-colors"
-            >
-              <span className="text-blue-500 mr-1">0{i+1}.</span>
-              {link.name}
+      <nav className="sticky-navbar">
+        <div className="nav-links">
+          {navItems.map(({ href, label, icon: Icon }) => (
+            <a key={href} href={href} className="nav-btn">
+              <Icon aria-hidden /> {label}
             </a>
           ))}
-        </nav>
-
-        {/* Mobile Nav Toggle */}
-        <button 
-          className="md:hidden text-slate-100"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X /> : <Menu />}
-        </button>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 p-6 md:hidden flex flex-col gap-4 shadow-xl">
-            {navLinks.map((link) => (
-              <a 
-                key={link.name}
-                href={link.href}
-                className="text-slate-400 hover:text-blue-400 py-2 block"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-        )}
-      </div>
-    </header>
+        </div>
+        <div className="nav-indicator">{personalInfo.navIndicator}</div>
+      </nav>
+    </>
   );
 }

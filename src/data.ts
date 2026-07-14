@@ -1,255 +1,276 @@
-import Github from 'lucide-react/dist/esm/icons/github';
-import Linkedin from 'lucide-react/dist/esm/icons/linkedin';
-import Mail from 'lucide-react/dist/esm/icons/mail';
-
 export const personalInfo = {
   name: "Ian Toyota",
-  role: "Harvard Electrical Engineering Junior",
-  tagline: "Power Systems + Data and AI",
-  bio: "I'm an Electrical Engineering student at Harvard with a passion for power systems, analog circuit design, microelectronics, and leveraging data/AI for energy solutions. My work bridges the gap between engineering and intelligent data systems.",
-  socials: [
-    {
-      name: "GitHub",
-      url: "https://github.com/ianmwai", 
-      icon: Github,
-    },
-    {
-      name: "LinkedIn",
-      url: "https://linkedin.com/in/ian-toyota", 
-      icon: Linkedin,
-    },
-    {
-      name: "Email",
-      url: "mailto:mwaitoyota@gmail.com", 
-      icon: Mail,
-    }
-  ],
-  headshot: "headshot.jpg"
+  brand: "IAN_TOYOTA_ENGINEERING",
+  brandTagline: "POWER SYSTEMS // POWER ELECTRONICS // DATA TOOLS",
+  role: "Senior in Electrical Engineering @ Harvard University",
+  statusBadge: "Power Systems + Power Electronics + Data Tools",
+  navIndicator: "HARVARD // SEAS",
+  bio: "I build across power systems, grid simulation, power electronics, and practical data tools for technical communication. My projects connect analysis, hardware design, and software interfaces so technical work is easier to understand and act on. I'm also a project lead and peer advisor who cares about building strong teams, in addition to my individual projects.",
+  headshot: "headshot.jpg",
+  links: {
+    github: "https://github.com/ianmwai",
+    linkedin: "https://linkedin.com/in/ian-toyota",
+    email: "mailto:mwaitoyota@gmail.com",
+    resume: "resume.pdf",
+  },
 };
 
+export const proofCards = [
+  {
+    title: "Engineering focus",
+    body: "Power systems, grid modeling, power electronics, hardware prototyping, and data visualization.",
+  },
+  {
+    title: "Current direction",
+    body: "Power systems tools used for simulation, and reliable software interfaces.",
+  },
+  {
+    title: "Availability",
+    body: "Seeking full-time engineering roles after graduating in May 2027; open to a gap year opportunity from September 2026 for the right energy, hardware, or infrastructure team.",
+  },
+];
+
+export type TagVariant = "leadership" | "research" | "industrial" | "data";
+
 export const experiences = [
+  {
+    role: "Summer Research Assistant",
+    company: "Xie Lab, Harvard SEAS",
+    period: "Jun 2026 – Present",
+    active: true,
+    tags: [
+      { label: "Hardware Research", variant: "research" as TagVariant },
+      { label: "NI-DAQ Instrumentation", variant: "industrial" as TagVariant },
+      { label: "GPU Power Measurement", variant: "data" as TagVariant },
+    ],
+    description:
+      "Building a GPU power logging workflow using NI-DAQ voltage and current sensing at 10 kHz sampling. Develop live monitoring and full-run data logging, moving verified runs to shared lab storage.",
+  },
   {
     role: "Project Lead",
     company: "Engineers Without Borders (EWB) – Harvard Chapter",
     period: "Nov 2025 – Present",
-    description: "Co-lead a team of 20 students in the design and development of a sustainable community water system. Utilize EPANET for hydraulic modeling, QGIS for spatial analysis, and Revit for BIM design. Oversee on-site construction and maintain technical documentation.",
-    category: "Leadership"
+    active: true,
+    tags: [
+      { label: "Leadership", variant: "leadership" as TagVariant },
+      { label: "Infrastructure Design", variant: "research" as TagVariant },
+      { label: "EPANET Simulation", variant: "data" as TagVariant },
+    ],
+    description:
+      "Co-lead a team of 20 students in the design and development of a sustainable community water system. Utilize EPANET for hydraulic modeling, QGIS for spatial analysis, and Revit for BIM design.",
   },
   {
-    role: "Peer Advising Fellow (PAF)",
-    company: "Advising Programs Office, Harvard University",
-    period: "April 2025 – Present",
-    description: "Provide academic advising on course and concentration selection. Help first-year students integrate into the Harvard community and organize entryway meetings.",
-    category: "Service"
-  },
-  {
-    role: "Director General",
-    company: "Harvard Model United Nations Africa (HNMUN)",
-    period: "May 2025 – March 2026",
-    description: "Supported the Secretary General in managing staff, establishing local partnerships, and overseeing logistics and post-conference planning.",
-    category: "Leadership"
-  },
-  {
-    role: "Intern, Design & Construction Department",
+    role: "Intern, Design & Construction",
     company: "Kenya Electricity Transmission Company (KETRACO)",
-    period: "May 2025 – August 2025",
-    description: "Supported design and simulation of high-voltage transmission lines. Used PSCAD and Simulink for grid modeling and fault analysis. Assisted with SCADA operations and protective relay testing.",
-    category: "Engineering"
+    period: "May – Aug 2025",
+    active: false,
+    tags: [
+      { label: "Industrial Internship", variant: "industrial" as TagVariant },
+      { label: "Grid Flow Simulation", variant: "research" as TagVariant },
+      { label: "PSCAD & SCADA", variant: "data" as TagVariant },
+    ],
+    description:
+      "Supported design and simulation of high-voltage transmission lines. Used PSCAD and Simulink for grid modeling, load flow calculations, fault analysis, and assisted with SCADA protective relay testing.",
   },
   {
     role: "Intern, Data Engineering Team",
-    company: "Qhala",
-    period: "May 2025 – Aug 2025",
-    description: "Developed interactive dashboards and adapted LLMs to client data, improving analytical accuracy and reducing manual processing time by 30%. Mapped African languages to improve AI tokenizer accessibility.",
-    category: "Engineering"
-  },
-  {
-    role: "Peer Tutor & PCA",
-    company: "Harvard University / SEAS",
-    period: "June 2025 – Present",
-    description: "Provide academic support for Circuits courses. Advise first-year students on academic planning in Electrical Engineering and organize community engagement events.",
-    category: "Service"
+    company: "Qhala Data Engineering",
+    period: "May – Aug 2025",
+    active: false,
+    tags: [
+      { label: "Industrial Internship", variant: "industrial" as TagVariant },
+      { label: "Linguistic Data Systems", variant: "data" as TagVariant },
+      { label: "LLM Adaptation", variant: "research" as TagVariant },
+    ],
+    description:
+      "Developed interactive dashboards and adapted LLMs to client data, reducing processing time by 30%. Mapped regional African dialects to optimize AI tokenizer bounds and model contexts.",
   },
   {
     role: "Research Assistant",
     company: "Bonmassar Lab, Martinos Center, Harvard Medical School",
-    period: "Feb 2025 – May 2025",
-    description: "Contributed to Deep Brain Stimulation (DBS) MRI-compatible electrodes. Utilized photolithography in Harvard CNS cleanrooms to etch micro-scale patterns on wafers.",
-    category: "Engineering"
+    period: "Feb – May 2025",
+    active: false,
+    tags: [
+      { label: "Medical Research", variant: "research" as TagVariant },
+      { label: "Cleanroom Fabrication", variant: "industrial" as TagVariant },
+      { label: "MEMS Design", variant: "data" as TagVariant },
+    ],
+    description:
+      "Contributed to Deep Brain Stimulation (DBS) MRI-compatible electrodes. Utilized photolithography in Harvard CNS cleanrooms to etch micro-scale patterns on silicon wafers.",
   },
-  {
-    role: "Communications Intern",
-    company: "Harvard Center for African Studies",
-    period: "Feb 2024 – Present",
-    description: "Manage digital communication channels, design marketing materials for events, and support administrative operations for the Africa Office.",
-    category: "Work"
-  },
-  {
-    role: "Summer Intern",
-    company: "Equity Bank Kenya",
-    period: "Jun – Aug 2022",
-    description: "Increased biller recruitment by 10% and merchant onboarding. Mentored students applying to U.S. colleges with significant success in full-funding admissions.",
-    category: "Work"
-  }
 ];
 
-export const skills = {
-  technical: [
-    { name: "Simulink", category: "Power Systems" },
-    { name: "PSCAD", category: "Power Systems" },
-    { name: "PowerWorld", category: "Power Systems" },
-    { name: "MatPower", category: "Power Systems" },
-    { name: "MOST", category: "Power Systems" },
-    { name: "Pandapower", category: "Power Systems" },
-    { name: "Python", category: "Data" },
-    { name: "R", category: "Data" },
-    { name: "Pandas", category: "Data" },
-    { name: "MATLAB", category: "Data" },
-    { name: "SQL", category: "Data" },
-    { name: "ESP32", category: "Hardware" },
-    { name: "Arduino", category: "Hardware" },
-    { name: "LTSpice", category: "Hardware" },
-    { name: "Fusion 360", category: "Hardware" },
-    { name: "EPANET", category: "Infrastructure & Design" },
-    { name: "QGIS", category: "Infrastructure & Design" },
-    { name: "REVIT", category: "Infrastructure & Design" },
-    { name: "React", category: "Web" },
-    { name: "HTML/CSS", category: "Web" },
-  ],
-  soft: [
-  "Analytical Thinking",
-  "Systems-Level Problem Solving",
-  "Technical Writing and Documentation",
-  "Project Leadership",
-  "Team Coordination and Mentorship",
-  "Cross-Disciplinary Collaboration",
-  "Stakeholder Communication",
-  "Field Implementation and Adaptability",
-  "Decision-Making Under Constraints",
-  "Long-Term Project Planning",
-  "Accountability and Ownership"
-]
-};
+export type ProjectLinkKind = "external" | "github" | "video" | "pdf" | "none";
 
 export const projects = [
   {
-    title: "EWB Water System Project",
-    category: "Hardware",
-    description: "Project Lead for a sustainable community water system. Leveraged EPANET for hydraulic modeling, QGIS for site mapping, and Revit for structural design. Directed implementation trips and oversaw on-site construction.",
-    tech: ["EPANET", "QGIS", "Revit", "Engineering Design"],
-    links: {
-      demo: "",
-      code: ""
-    }
+    title: "ERCOT Congestion Study",
+    description:
+      "Built with a partner. Studied renewables, storage, and electricity affordability. Used fixed-effects price analysis. Simulated Texas 2,000-bus SCUC/SCED dispatch under storage siting cases.",
+    tech: ["MATPOWER", "MOST", "Gurobi", "Python"],
+    video: null,
+    links: [
+      {
+        kind: "pdf" as ProjectLinkKind,
+        label: "Project Report (PDF)",
+        url: "ES215_Project_Report.pdf",
+      },
+    ],
   },
   {
-    title: "Single Cycle MIPS Processor",
-    category: "Hardware",
-    description: "Designed and implemented a single-cycle MIPS processor using Verilog in Vivado. Handled instruction fetching, decoding, execution, and memory access.",
-    tech: ["Verilog", "Vivado", "MIPS"],
-    links: {
-      demo: "",
-      code: ""
-    }
+    title: "Grid-Following Inverter Prototype",
+    description:
+      "Built with a partner. Designed a low-voltage SPWM inverter prototype. Moved from LTspice models to breadboard tests. Demonstrated filtered output and voltage-following behavior.",
+    tech: ["Power Electronics", "LTspice", "SPWM", "STM32"],
+    video: null,
+    links: [
+      {
+        kind: "pdf" as ProjectLinkKind,
+        label: "Project Report (PDF)",
+        url: "ES_145_Final_Project_Report.pdf",
+      },
+    ],
   },
   {
-    title: "Renewable Integration Analysis",
-    category: "Power Systems",
-    description: "Built an optimization model on the ERCOT 2000-bus synthetic grid using MATPOWER to evaluate battery co-location strategies and mitigate grid congestion.",
-    tech: ["MATPOWER", "Simulink", "Data Analysis"],
-    links: {
-      demo: "", 
-      code: ""
-    }
+    title: "Real-Time Grid Dashboard",
+    description:
+      "Built a Streamlit grid dashboard. Tracked regional capacity and load indicators. Connected the interface to live data. Made operating conditions easier to scan, explain, and share.",
+    tech: ["Python", "Streamlit", "Live API"],
+    video: null,
+    links: [
+      {
+        kind: "external" as ProjectLinkKind,
+        label: "Live App",
+        url: "https://energy-dashboard-kenya.streamlit.app/",
+      },
+      {
+        kind: "github" as ProjectLinkKind,
+        label: "Project Repo",
+        url: "https://github.com/IanMwai/ai-energy-usage",
+      },
+    ],
   },
   {
-    title: "Energy Dashboard",
-    category: "Data",
-    description: "Streamlit app pulling real-time electricity data from electricitymaps API.",
-    tech: ["Python", "Streamlit", "API"],
-    links: {
-      demo: "https://energy-dashboard-kenya.streamlit.app/",
-      code: "https://github.com/IanMwai/ai-energy-usage"
-    }
+    title: "IoT Bicycle Telemetry",
+    description:
+      "Built ESP32 bicycle telemetry firmware. Read live speed signals from sensors. Added adaptive speed logic. Recorded a working hardware demo with real-time response on the bike.",
+    tech: ["ESP32", "C++", "Firmware"],
+    video: {
+      url: "https://www.youtube.com/watch?v=MXp-lmJnmMQ",
+      thumbnail: "https://img.youtube.com/vi/MXp-lmJnmMQ/hqdefault.jpg",
+    },
+    links: [
+      {
+        kind: "video" as ProjectLinkKind,
+        label: "Video Demo",
+        url: "https://www.youtube.com/watch?v=MXp-lmJnmMQ",
+      },
+      {
+        kind: "github" as ProjectLinkKind,
+        label: "Project Repo",
+        url: "https://github.com/IanMwai/ps70_spring2025",
+      },
+    ],
   },
   {
-    title: "Football Analytics",
-    category: "Data",
-    description: "Pipeline transforming API-Football data into Metabase dashboards via PostgreSQL.",
-    tech: ["Python", "PostgreSQL", "Docker"],
-    links: {
-      demo: "",
-      code: "https://github.com/IanMwai/football_dashboard"
-    }
+    title: "Let's Grab a Meal",
+    description:
+      "Built a personal CRM for relationships. Tracks catch-up cadence, birthdays, and notes. Sends daily email nudges. Helps keep close people from slipping away quietly over time.",
+    tech: ["React", "TypeScript", "Cloudflare Workers", "D1"],
+    video: null,
+    links: [
+      {
+        kind: "github" as ProjectLinkKind,
+        label: "Project Repo",
+        url: "https://github.com/IanMwai/letsgrabameal",
+      },
+    ],
   },
   {
-    title: "African Languages Map",
-    category: "Web",
-    description: "Interactive web map using Glottolog data to explore African languages.",
-    tech: ["JavaScript", "Leaflet", "GeoJSON"],
-    links: {
-      demo: "https://ianmwai.github.io/african-languages/",
-      code: "https://github.com/IanMwai/african-languages"
-    }
+    title: "GPU Power Logging Workflow",
+    description:
+      "Ongoing summer project. Measures GPU power with NI-DAQ voltage and current signals. Shows live monitoring and saves full logs. Moves verified runs to shared lab storage.",
+    tech: ["NI-DAQ", "10 kHz Sampling", "Visualization", "Data Logging"],
+    video: null,
+    links: [
+      {
+        kind: "github" as ProjectLinkKind,
+        label: "Project Repo",
+        url: "https://github.com/IanMwai/paihardware",
+      },
+    ],
   },
   {
-    title: "Resume Builder",
-    category: "Web",
-    description: "React app using Gemini CLI to automate tailoring resumes to job descriptions.",
-    tech: ["React", "Firebase", "Gemini API"],
-    links: {
-      demo: "https://resume-builder-ian.web.app/",
-      code: "https://github.com/IanMwai/resume-builder"
-    }
+    title: "LiDAR Ladder-Fuel Risk Mapping",
+    description:
+      "Framed ladder-fuel mapping as signal detection. Built synthetic labeled point clouds. Tested ROC performance across detector variants. Applied the pipeline to real NEON LiDAR.",
+    tech: ["Signal Detection", "LiDAR", "Python", "NEON"],
+    video: null,
+    links: [
+      {
+        kind: "github" as ProjectLinkKind,
+        label: "Project Repo",
+        url: "https://github.com/IanMwai/ES156-Final-Project",
+      },
+    ],
   },
-  {
-    title: "IoT Cycling System",
-    category: "Hardware",
-    description: "Custom bike lighting and speed-sensing system with speed-adaptive brightness.",
-    tech: ["ESP32", "C++", "Electronics"],
-    links: {
-      demo: "https://www.youtube.com/watch?v=MXp-lmJnmMQ",
-      code: "https://github.com/IanMwai/ps70_spring2025"
-      
-    }
-  },
-  {
-    title: "MyMindscape",
-    category: "Web",
-    description: "Flask-based mindfulness tracker for mood logs and journals.",
-    tech: ["Flask", "SQL", "Python", "CSS/HTML"],
-    links: {
-      code: "https://github.com/IanMwai/mymindscape"
-    }
-  }
 ];
 
-export const writingIntro = "I believe that engineering is as much about communication as it is about technical implementation. Here, I share my thoughts on technology, my travel experiences, and my personal thoughts.";
+export type SkillAccent = "accent" | "accent2" | "accent3" | "accent4";
+
+export const skillGroups = [
+  {
+    title: "Power Systems",
+    accent: "accent" as SkillAccent,
+    skills: ["Simulink", "PSCAD", "MatPower", "Pandapower"],
+  },
+  {
+    title: "Data Engineering",
+    accent: "accent2" as SkillAccent,
+    skills: ["Python", "MATLAB", "R Language", "SQL"],
+  },
+  {
+    title: "Hardware Core",
+    accent: "accent3" as SkillAccent,
+    skills: ["ESP32", "Arduino", "LTSpice", "Lithography"],
+  },
+  {
+    title: "Civil Design",
+    accent: "accent4" as SkillAccent,
+    skills: ["EPANET", "QGIS", "Revit BIM"],
+  },
+];
 
 export const writing = [
   {
     title: "Ian thinks, therefore this!",
     platform: "Blogspot",
-    url: "https://iantoyota.blogspot.com/" 
+    url: "https://iantoyota.blogspot.com/",
+    summary:
+      "Personal essays on lived experiences and society in general.",
   },
   {
-    title: "Travel Log",
+    title: "Travel Journal",
     platform: "FindPenguins",
-    url: "https://findpenguins.com/iantoyota"
+    url: "https://findpenguins.com/iantoyota",
+    summary:
+      "Travel notes and field observations on cities, infrastructure, and cultures.",
   },
   {
-    title: "Tech Articles",
+    title: "Technical Journal",
     platform: "Medium",
-    url: "https://medium.com/@iantoyota"
-  }
+    url: "https://medium.com/@iantoyota",
+    summary:
+      "Essays breaking down different technologies/topics in the energy industry.",
+  },
 ];
 
 export const interests = [
- "Model UN",
- "African Literature",
- "Soccer",
- "Cooking",
- "Cycling",
- "Traveling",
- "Hiking"
+  "Model UN",
+  "African Literature",
+  "Soccer",
+  "Cooking",
+  "Cycling",
+  "Traveling",
+  "Hiking",
 ];
