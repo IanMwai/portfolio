@@ -1,20 +1,20 @@
 # Ian Toyota - Portfolio
 
-This my personal portfolio. The idea was to make something modern looking but minimalistic.
+My personal portfolio, live at [iantoyota.com](https://iantoyota.com). A slate + crimson design with a technical, blueprint feel — hard borders, offset shadows, and mono type.
 
 ## Tech Stack
 
 - **Frontend:** React, TypeScript, Vite
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
+- **Styling:** Plain CSS with design tokens (CSS variables), Tailwind base
 - **Icons:** Lucide React
-- **Deployment:** GitHub Pages
+- **Hosting:** Cloudflare Workers (static assets), custom domain via Cloudflare DNS
 
 ## Structure
 
 - `src/data.ts`: Central source of truth for all content (personal info, experiences, skills, projects, writing).
-- `src/components/`: Modular UI components (Hero, Skills, Experience, Projects, etc.).
-- `public/`: Static assets like the resume PDF and headshot image.
+- `src/index.css`: Theme tokens and all component styling.
+- `src/components/`: Modular UI components (Hero, Projects, Experience, Skills, Writing, Interests).
+- `public/`: Static assets — resume PDF, project reports, headshot, favicon.
 
 ## Getting Started
 
@@ -36,20 +36,14 @@ npm run dev
 npm run build
 ```
 
-### Deployment
+## Deployment
 
-The project is configured for easy deployment to GitHub Pages.
-
-1. Ensure your `vite.config.ts` has the correct `base` path (usually your repository name).
-2. Run the deploy script:
-
-```bash
-npm run deploy
-```
+Deploys automatically: every push to `main` triggers a Cloudflare build (`npm run build`, serving `dist/`). No manual deploy step.
 
 ## Customization
 
-To update your profile, simply edit the objects in `src/data.ts`.
+All content lives in `src/data.ts` — edit the objects there and the site updates.
 
-- **Resume:** Replace `public/resume.pdf` with your actual file.
-- **Headshot:** Place your photo in `public/headshot.jpg`.
+- **Resume:** replace `public/resume.pdf`.
+- **Headshot:** replace `public/headshot.jpg`.
+- **Project videos:** each project card has a video slot; set `video: { url, thumbnail }` in `data.ts` to replace the "coming soon" placeholder.

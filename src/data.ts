@@ -47,35 +47,48 @@ export const experiences = [
       "Building a GPU power logging workflow using NI-DAQ voltage and current sensing at 10 kHz sampling. Develop live monitoring and full-run data logging, moving verified runs to shared lab storage.",
   },
   {
-    role: "Project Lead",
-    company: "Engineers Without Borders (EWB) – Harvard Chapter",
-    period: "Nov 2025 – Present",
+    role: "Lab Teaching Assistant",
+    company: "Harvard John A. Paulson School of Engineering and Applied Sciences",
+    period: "Jan – May 2026",
+    active: false,
+    tags: [
+      { label: "Teaching", variant: "leadership" as TagVariant },
+      { label: "Circuits Lab", variant: "research" as TagVariant },
+      { label: "Instrumentation", variant: "data" as TagVariant },
+    ],
+    description:
+      "Supported intro EE lab courses with circuit assembly, measurement, and debugging. Guided students on oscilloscopes, multimeters, power supplies, and function generators, and mentored final projects from schematic to working breadboard prototype.",
+  },
+  {
+    role: "Co-Project Lead – Kibuon Project",
+    company: "Engineers Without Borders USA – Harvard SEAS Chapter",
+    period: "Dec 2025 – Present",
     active: true,
     tags: [
       { label: "Leadership", variant: "leadership" as TagVariant },
-      { label: "Infrastructure Design", variant: "research" as TagVariant },
-      { label: "EPANET Simulation", variant: "data" as TagVariant },
+      { label: "Water Infrastructure", variant: "research" as TagVariant },
+      { label: "Project Management", variant: "data" as TagVariant },
     ],
     description:
-      "Co-lead a team of 20 students in the design and development of a sustainable community water system. Utilize EPANET for hydraulic modeling, QGIS for spatial analysis, and Revit for BIM design.",
+      "Co-lead a multidisciplinary team designing and implementing community-scale water distribution networks for an underserved community in Migori, Kenya. Coordinate timelines, technical documentation, and stakeholder conversations to ensure project continuity.",
   },
   {
     role: "Intern, Design & Construction",
     company: "Kenya Electricity Transmission Company (KETRACO)",
-    period: "May – Aug 2025",
+    period: "Jun – Aug 2025",
     active: false,
     tags: [
       { label: "Industrial Internship", variant: "industrial" as TagVariant },
-      { label: "Grid Flow Simulation", variant: "research" as TagVariant },
-      { label: "PSCAD & SCADA", variant: "data" as TagVariant },
+      { label: "Substation Testing", variant: "research" as TagVariant },
+      { label: "SCADA & Protection", variant: "data" as TagVariant },
     ],
     description:
-      "Supported design and simulation of high-voltage transmission lines. Used PSCAD and Simulink for grid modeling, load flow calculations, fault analysis, and assisted with SCADA protective relay testing.",
+      "Supported design and simulation of high-voltage transmission lines using PSCAD and Simulink for grid modeling and fault analysis. Assisted with SCADA operations, tested substation equipment and protective relays, and observed commissioning during site visits.",
   },
   {
     role: "Intern, Data Engineering Team",
     company: "Qhala Data Engineering",
-    period: "May – Aug 2025",
+    period: "Jun – Aug 2025 · Hybrid",
     active: false,
     tags: [
       { label: "Industrial Internship", variant: "industrial" as TagVariant },
@@ -86,17 +99,29 @@ export const experiences = [
       "Developed interactive dashboards and adapted LLMs to client data, reducing processing time by 30%. Mapped regional African dialects to optimize AI tokenizer bounds and model contexts.",
   },
   {
+    role: "Peer Advising Fellow",
+    company: "Advising Programs Office, Harvard University",
+    period: "Apr 2025 – Present",
+    active: true,
+    tags: [
+      { label: "Mentorship", variant: "leadership" as TagVariant },
+      { label: "Academic Advising", variant: "data" as TagVariant },
+    ],
+    description:
+      "Advise first-year students on course and concentration selection and help them integrate into the Harvard community. Also served as an EE Peer Concentration Advisor and Peer Tutor for circuits and devices (2025–26).",
+  },
+  {
     role: "Research Assistant",
-    company: "Bonmassar Lab, Martinos Center, Harvard Medical School",
+    company: "Athinoula A. Martinos Center, Harvard Medical School",
     period: "Feb – May 2025",
     active: false,
     tags: [
       { label: "Medical Research", variant: "research" as TagVariant },
-      { label: "Cleanroom Fabrication", variant: "industrial" as TagVariant },
-      { label: "MEMS Design", variant: "data" as TagVariant },
+      { label: "Microfabrication", variant: "industrial" as TagVariant },
+      { label: "E-Beam Lithography", variant: "data" as TagVariant },
     ],
     description:
-      "Contributed to Deep Brain Stimulation (DBS) MRI-compatible electrodes. Utilized photolithography in Harvard CNS cleanrooms to etch micro-scale patterns on silicon wafers.",
+      "Contributed to a DBS leads project developing MRI-safe electrodes. Specialized in assembly and fabrication, refining micro-welding of delicate components, with e-beam lithography, SEM imaging, and optical microscopy at Harvard CNS.",
   },
 ];
 
@@ -175,7 +200,7 @@ export const projects = [
   {
     title: "Let's Grab a Meal",
     description:
-      "Built a personal CRM for relationships. Tracks catch-up cadence, birthdays, and notes. Sends daily email nudges. Helps keep close people from slipping away quietly over time.",
+      "This app helps me track catch-up cadence, birthdays, and notes so I can keep up with friendships. Sends daily email nudges. Helps keep close people from slipping away quietly over time.",
     tech: ["React", "TypeScript", "Cloudflare Workers", "D1"],
     video: null,
     links: [
@@ -222,7 +247,7 @@ export const skillGroups = [
   {
     title: "Power Systems",
     accent: "accent" as SkillAccent,
-    skills: ["Simulink", "PSCAD", "MatPower", "Pandapower"],
+    skills: ["Simulink", "PSCAD", "RSCAD FX", "MatPower", "Pandapower"],
   },
   {
     title: "Data Engineering",
@@ -232,7 +257,15 @@ export const skillGroups = [
   {
     title: "Hardware Core",
     accent: "accent3" as SkillAccent,
-    skills: ["ESP32", "Arduino", "LTSpice", "Lithography"],
+    skills: [
+      "ESP32",
+      "Arduino",
+      "LTSpice",
+      "Lithography",
+      "Oscilloscope",
+      "Multimeter",
+      "Bench-Top & Battery Power Supplies",
+    ],
   },
   {
     title: "Civil Design",

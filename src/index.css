@@ -172,6 +172,8 @@ body {
   align-items: center;
   margin-bottom: 56px;
   padding: 32px;
+  /* Fill the rest of the first screen so the next section never peeks above the fold */
+  min-height: calc(100vh - 300px);
 }
 .hero-main {
   display: grid;
