@@ -178,7 +178,7 @@ export const projects = [
   {
     title: "IoT Bicycle Telemetry",
     description:
-      "Built ESP32 bicycle telemetry firmware. Read live speed signals from sensors. Added adaptive speed logic. Recorded a working hardware demo with real-time response on the bike.",
+      "Built ESP32 bicycle telemetry firmware. Read live speed signals from sensors. Added adaptive speed logic. Working on hardware to demo this with real-time response on the bike.",
     tech: ["ESP32", "C++", "Firmware"],
     video: {
       url: "https://www.youtube.com/watch?v=MXp-lmJnmMQ",
@@ -228,7 +228,7 @@ export const projects = [
   {
     title: "LiDAR Ladder-Fuel Risk Mapping",
     description:
-      "Framed ladder-fuel mapping as signal detection. Built synthetic labeled point clouds. Tested ROC performance across detector variants. Applied the pipeline to real NEON LiDAR.",
+      "Framed ladder-fuel mapping as signal detection. Built synthetic labeled point clouds. Tested ROC performance across detector variants. Related to my senior thesis so might get back to it.",
     tech: ["Signal Detection", "LiDAR", "Python", "NEON"],
     video: null,
     links: [
