@@ -2,10 +2,14 @@ export const personalInfo = {
   name: "Ian Toyota",
   brand: "IAN_TOYOTA_ENGINEERING",
   brandTagline: "POWER SYSTEMS // POWER ELECTRONICS // DATA TOOLS",
-  role: "Senior in Electrical Engineering @ Harvard University",
+  role: "Senior in Electrical Engineering at Harvard University",
   statusBadge: "Power Systems + Power Electronics + Data Tools",
   navIndicator: "HARVARD // SEAS",
-  bio: "I build across power systems, grid simulation, power electronics, and practical data tools for technical communication. My projects connect analysis, hardware design, and software interfaces so technical work is easier to understand and act on. I'm also a project lead and peer advisor who cares about building strong teams, in addition to my individual projects.",
+  introduction: [
+    "I was born and raised in Kenya, and I’m now a senior studying Electrical Engineering at Harvard. Within engineering, I’m especially interested in power systems, power electronics, and building tools that make complicated technical ideas easier to understand.",
+    "I enjoy moving between simulation, hardware, and software—whether I’m modeling an electrical grid, debugging a circuit, or finding a clearer way to present data. I also care a lot about the people around the work, which has led me toward teaching, peer advising, and leading project teams.",
+    "This site is a collection of things I’ve built, questions I’ve explored, and a little of what I care about outside engineering. Please have a look around.",
+  ],
   headshot: "headshot.jpg",
   links: {
     github: "https://github.com/ianmwai",
@@ -280,30 +284,58 @@ export const writing = [
     platform: "Blogspot",
     url: "https://iantoyota.blogspot.com/",
     summary:
-      "Personal essays on lived experiences and society in general.",
+      "This is where I write most personally—about experiences, questions, and the parts of society I keep turning over in my head.",
   },
   {
     title: "Travel Journal",
     platform: "FindPenguins",
     url: "https://findpenguins.com/iantoyota",
     summary:
-      "Travel notes and field observations on cities, infrastructure, and cultures.",
+      "When I travel, I try to record more than the itinerary. These are personal notes on places, people, infrastructure, food, and what wowed me.",
   },
   {
     title: "Technical Journal",
     platform: "Medium",
     url: "https://medium.com/@iantoyota",
     summary:
-      "Essays breaking down different technologies/topics in the energy industry.",
+      "For the more technical side of my brain: explanations and reflections on energy and the technologies I am learning about.",
   },
 ];
 
 export const interests = [
-  "Model UN",
-  "African Literature",
-  "Soccer",
-  "Cooking",
-  "Cycling",
-  "Traveling",
-  "Hiking",
+  {
+    title: "Model UN",
+    description:
+      "I’ve chaired two committees and helped run a conference. I enjoy the research and debate, but also the challenge of keeping a room moving toward something productive.",
+  },
+  {
+    title: "African Literature",
+    description:
+      "I read a lot of African literature. Some of my favorite writers are Ngũgĩ wa Thiong’o, Chimamanda Ngozi Adichie, NoViolet Bulawayo, and Barbara Kimenye.",
+  },
+  {
+    title: "Soccer",
+    description:
+      "I usually play defense, either right back or center back. I am not good by any stretch but it is fun so I keep doing it. ",
+  },
+  {
+    title: "Cooking",
+    description:
+      "I cook primarily Kenyan food, especially the meals that remind me of home, like Ugali or Chapati.",
+  },
+  {
+    title: "Cycling",
+    description:
+      "One of my favorite ways to explore Boston is by following its designated bike lanes and seeing where they take me. The emerald necklace is a favorite!",
+  },
+  {
+    title: "Travel",
+    description:
+      "I enjoy visiting new countries and cities, particularly when I have enough time and money to understand how people actually live there.",
+  },
+  {
+    title: "Hiking",
+    description:
+      "I like low-stakes hiking: enough movement and scenery to feel worthwhile, without pretending I’m climbing Everest.",
+  },
 ];

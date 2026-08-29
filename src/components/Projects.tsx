@@ -12,7 +12,7 @@ const linkIcons: Record<ProjectLinkKind, typeof ExternalLink> = {
 
 export default function Projects() {
   return (
-    <Section id="projects" title="Selected Technical Work" icon={Cpu}>
+    <Section id="projects" title="A Few Things I’ve Built" icon={Cpu}>
       <div className="projects-grid">
         {projects.map((project) => (
           <div className="fusion-card proj-card" key={project.title}>
@@ -32,16 +32,7 @@ export default function Projects() {
                     <Play />
                   </span>
                 </a>
-              ) : (
-                <div
-                  className="project-video-preview placeholder"
-                  aria-label={`${project.title} video coming soon`}
-                >
-                  <span className="video-soon-label">
-                    <Play aria-hidden /> Video coming soon
-                  </span>
-                </div>
-              )}
+              ) : null}
             </div>
             <div>
               <div className="tech-pill-row">

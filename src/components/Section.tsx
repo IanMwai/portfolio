@@ -8,13 +8,10 @@ interface SectionProps {
   children: ReactNode;
 }
 
-export default function Section({ id, title, icon: Icon, children }: SectionProps) {
+export default function Section({ id, title, children }: SectionProps) {
   return (
     <section id={id} className="stream-section">
-      <h2>
-        <Icon aria-hidden />
-        {title}
-      </h2>
+      <h2>{title}</h2>
       {children}
     </section>
   );
